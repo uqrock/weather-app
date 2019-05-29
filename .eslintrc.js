@@ -10,6 +10,6 @@ module.exports = {
     commonjs: true
   },
   rules: {
-    "no-undef": 0
+    "no-undef": 0,
   }
 };

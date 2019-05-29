@@ -45,7 +45,6 @@
     "yargs": "^13.2.0"
   },
   "dependencies": {
-    "skycons": "^1.0.0",
     "svg4everybody": "^2.1.9"
   }
 }

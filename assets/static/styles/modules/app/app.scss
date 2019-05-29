@@ -1,14 +1,5 @@
-.location,
-.temperature {
-   align-items: center;
-   display: flex;
-   height: 30vh;
-   justify-content: space-around;
-   width: 50%;
-}
-
-.temperature {
-   flex-direction: column;
+.location {
+   margin-bottom: 30px;
 }
 
 .degree-section {
@@ -17,11 +8,16 @@
    display: flex;
 }
 
-.degree-section span {
-   font-size: 30px;
-   margin: 10px;
+.temp-degree {
+   margin-left: 30px;
 }
 
-.degree-section h2 {
-   font-size: 40px;
+.temp-value {
+   font-size: 30px;
+   margin-left: 10px;
+}
+
+.temp-description {
+   margin-top: 30px;
+   text-align: center;
 }

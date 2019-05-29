@@ -1,13 +1,12 @@
 window.addEventListener(`load`, () => {
   let long = null;
   let lat = null;
-  const temperatureDescription = document.querySelector(
-      `.temperature-description`
-  );
-  const temperatureDegree = document.querySelector(`.temperature-degree`);
-  const locationTimezone = document.querySelector(`.location-timezone`);
 
-  // console.log(window.navigator);
+  const tempDegree = document.querySelector(`.temp-degree`);
+  const locationTimezone = document.querySelector(`.location-timezone`);
+  const tempSection = document.querySelector(`.degree-section`);
+  const tempSpan = document.querySelector(`.temp-value`);
+  const tempDescription = document.querySelector(`.temp-description`);
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -24,12 +23,28 @@ window.addEventListener(`load`, () => {
         .then((data) => {
           const {temperature, summary, icon} = data.currently;
           // Set Dom Elements from API
-          temperatureDegree.textContent = temperature;
-          temperatureDescription.textContent = summary;
+          tempDegree.textContent = temperature;
+          tempDescription.textContent = summary;
           locationTimezone.textContent = data.timezone;
-          // Set Icon
-          setIcons(icon, document.querySelector(`.icon`));
+          tempSpan.textContent = `F`;
+
+          toggleTempValue(temperature); // Change temp to Celseius/Farenheit
+          setIcons(icon, document.querySelector(`.icon`)); // Set Icon
         });
+    });
+  }
+
+  function toggleTempValue(temp) {
+    let celsius = (temp - 32) * (5 / 9);
+
+    tempSection.addEventListener(`click`, () => {
+      if (tempSpan.textContent === `F`) {
+        tempSpan.textContent = `C`;
+        tempDegree.textContent = Math.floor(celsius);
+      } else {
+        tempSpan.textContent = `F`;
+        tempDegree.textContent = temp;
+      }
     });
   }
 
