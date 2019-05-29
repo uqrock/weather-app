@@ -1,0 +1,23 @@
+/* stylelint-disable */
+@mixin size($a, $b: $a) {
+   height: $b;
+   width: $a;
+}
+
+@mixin placeholder {
+   ::-webkit-input-placeholder {
+      @content;
+   }
+
+   :-moz-placeholder {
+      @content;
+   }
+
+   ::-moz-placeholder {
+      @content;
+   }
+
+   :-ms-input-placeholder {
+      @content;
+   }
+}

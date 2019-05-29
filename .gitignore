@@ -1,0 +1,12 @@
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+.idea
+.vscode
+ehthumbs.db
+Thumbs.db
+_config.yml
+node_modules
+build
+yarn.lock

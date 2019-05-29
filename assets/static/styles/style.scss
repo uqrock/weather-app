@@ -1,0 +1,69 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   color: $text-color;
+   font-family: $mainFont;
+   font-size: $font-size;
+   margin: 0;
+   min-width: 320px;
+   overflow-x: hidden;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul,
+li {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+.img-responsive {
+   display: block;
+   height: auto;
+   max-width: 100%;
+
+   &.img-width {
+      width: 100%;
+   }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   clip-path: inset(100%);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
+}
+
+.container {
+   margin: 0 auto;
+   max-width: $content-size;
+   width: 100%;
+}
+
+//Модули
+@import "modules/modules";
