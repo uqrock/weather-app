@@ -11,16 +11,22 @@ html {
 *::before,
 *::after {
    box-sizing: inherit;
+   margin: 0;
+   padding: 0;
 }
 
 body {
-   color: $text-color;
+   align-items: center;
+   background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+   color: $white;
+   display: flex;
+   flex-direction: column;
    font-family: $mainFont;
    font-size: $font-size;
-   margin: 0;
+   height: 100vh;
+   justify-content: center;
    min-width: 320px;
    overflow-x: hidden;
-   padding: 0;
 }
 
 a {
@@ -57,12 +63,6 @@ input[type="radio"].visually-hidden {
    position: absolute;
    white-space: nowrap;
    width: 1px;
-}
-
-.container {
-   margin: 0 auto;
-   max-width: $content-size;
-   width: 100%;
 }
 
 //Модули

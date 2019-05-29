@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Weather-app</title>
-    <meta name="theme-color" content="#000000" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Weather-app</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.min.css" />
 
+</head>
 
-    <script src="js/bundle.js"></script>
-  </body>
+<body>
+
+  <div class="location">
+    <h1 class="location-timezone">Timezone</h1>
+    <canvas id="icon1" width="128" height="128"></canvas>
+  </div>
+
+  <div class="temperature">
+    <div class="degree-section">
+      <h2 class="temperature-degree">34</h2>
+      <span>F</span>
+    </div>
+    <div class="temperature-description">It's freggin cold</div>
+  </div>
+
+  <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+  <script src="js/bundle.js"></script>
+</body>
+
 </html>
